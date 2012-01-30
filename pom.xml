@@ -17,7 +17,7 @@
   <groupId>com.likeness.components</groupId>
   <artifactId>likeness-tinyhttp</artifactId>
   <name>likeness-tinyhttp</name>
-  <version>1.0.0</version>
+  <version>1.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
   <description>A minimal HTTP/HTTPS client for loading configuration or small data files from the network.</description>
 
