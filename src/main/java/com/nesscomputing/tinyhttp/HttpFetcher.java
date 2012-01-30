@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.likeness.tinyhttp;
+package com.nesscomputing.tinyhttp;
 
 import java.io.Closeable;
 import java.io.IOException;
@@ -43,9 +43,9 @@ import org.apache.http.protocol.HttpContext;
 
 import com.google.common.base.Throwables;
 import com.google.common.io.Closeables;
-import com.likeness.logging.Log;
-import com.likeness.tinyhttp.ssl.HttpsTrustManagerFactory;
-import com.likeness.tinyhttp.ssl.SSLConfig;
+import com.nesscomputing.logging.Log;
+import com.nesscomputing.tinyhttp.ssl.HttpsTrustManagerFactory;
+import com.nesscomputing.tinyhttp.ssl.SSLConfig;
 
 public final class HttpFetcher implements Closeable
 {

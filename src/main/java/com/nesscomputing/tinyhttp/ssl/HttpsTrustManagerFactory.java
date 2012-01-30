@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.likeness.tinyhttp.ssl;
+package com.nesscomputing.tinyhttp.ssl;
 
 import java.io.IOException;
 import java.net.URL;
@@ -29,7 +29,7 @@ import javax.net.ssl.X509TrustManager;
 import org.apache.commons.lang3.StringUtils;
 
 import com.google.common.io.Resources;
-import com.likeness.logging.Log;
+import com.nesscomputing.logging.Log;
 
 public final class HttpsTrustManagerFactory
 {

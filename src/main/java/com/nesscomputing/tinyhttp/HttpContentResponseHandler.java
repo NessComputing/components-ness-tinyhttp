@@ -13,9 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.likeness.tinyhttp;
-
-import com.likeness.logging.Log;
+package com.nesscomputing.tinyhttp;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -29,6 +27,8 @@ import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpRequest;
 import org.apache.http.HttpResponse;
+
+import com.nesscomputing.logging.Log;
 
 
 /**

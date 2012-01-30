@@ -3,29 +3,29 @@
 
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>com.likeness</groupId>
+    <groupId>com.nesscomputing</groupId>
     <artifactId>ness-oss-parent</artifactId>
-    <version>2</version>
+    <version>3</version>
   </parent>
 
   <scm>
-    <connection>scm:git:git://github.com/NessComputing/components-likeness-tinyhttp.git</connection>
-    <developerConnection>scm:git:git@github.com:NessComputing/components-likeness-tinyhttp.git</developerConnection>
-    <url>http://github.com/NessComputing/components-likeness-tinyhttp</url>
+    <connection>scm:git:git://github.com/NessComputing/components-ness-tinyhttp.git</connection>
+    <developerConnection>scm:git:git@github.com:NessComputing/components-ness-tinyhttp.git</developerConnection>
+    <url>http://github.com/NessComputing/components-ness-tinyhttp</url>
   </scm>
 
-  <groupId>com.likeness.components</groupId>
-  <artifactId>likeness-tinyhttp</artifactId>
-  <name>likeness-tinyhttp</name>
+  <groupId>com.nesscomputing.components</groupId>
+  <artifactId>ness-tinyhttp</artifactId>
+  <name>ness-tinyhttp</name>
   <version>1.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
   <description>A minimal HTTP/HTTPS client for loading configuration or small data files from the network.</description>
 
   <dependencies>
     <dependency>
-      <groupId>com.likeness.components</groupId>
-      <artifactId>likeness-logging</artifactId>
-      <version>1.0.1</version>
+      <groupId>com.nesscomputing.components</groupId>
+      <artifactId>ness-logging</artifactId>
+      <version>1.0.2</version>
     </dependency>
 
     <dependency>
