@@ -26,14 +26,15 @@ import javax.net.ssl.TrustManager;
 import javax.net.ssl.TrustManagerFactory;
 import javax.net.ssl.X509TrustManager;
 
-import org.apache.commons.lang3.StringUtils;
-
 import com.google.common.io.Resources;
-import com.nesscomputing.logging.Log;
+
+import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public final class HttpsTrustManagerFactory
 {
-    private static final Log LOG = Log.findLog();
+    private static final Logger LOG = LoggerFactory.getLogger(HttpsTrustManagerFactory.class);
 
     private HttpsTrustManagerFactory() {
     }

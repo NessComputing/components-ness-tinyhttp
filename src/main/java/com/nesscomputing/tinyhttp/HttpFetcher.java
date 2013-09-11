@@ -23,6 +23,9 @@ import java.security.GeneralSecurityException;
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
 
+import com.google.common.base.Throwables;
+import com.google.common.io.Closeables;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -40,16 +43,15 @@ import org.apache.http.params.BasicHttpParams;
 import org.apache.http.params.HttpParams;
 import org.apache.http.protocol.BasicHttpContext;
 import org.apache.http.protocol.HttpContext;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import com.google.common.base.Throwables;
-import com.google.common.io.Closeables;
-import com.nesscomputing.logging.Log;
 import com.nesscomputing.tinyhttp.ssl.HttpsTrustManagerFactory;
 import com.nesscomputing.tinyhttp.ssl.SSLConfig;
 
 public final class HttpFetcher implements Closeable
 {
-    private static final Log LOG = Log.findLog();
+    private static final Logger LOG = LoggerFactory.getLogger(HttpFetcher.class);
 
     private final HttpParams params = new BasicHttpParams();
 	private final SchemeRegistry registry = new SchemeRegistry();
@@ -128,7 +130,7 @@ public final class HttpFetcher implements Closeable
 				}
 			}
 		} catch (Exception e) {
-			LOG.warnDebug(e, "Aborting Request!");
+			LOG.warn("Aborting Request!", e);
 
 			httpRequest.abort();
 			throw Throwables.propagate(e);

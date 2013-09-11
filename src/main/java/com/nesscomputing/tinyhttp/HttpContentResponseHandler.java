@@ -27,8 +27,8 @@ import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpRequest;
 import org.apache.http.HttpResponse;
-
-import com.nesscomputing.logging.Log;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 /**
@@ -36,7 +36,7 @@ import com.nesscomputing.logging.Log;
  */
 public class HttpContentResponseHandler<T>
 {
-    private static final Log log = Log.findLog();
+    private static final Logger log = LoggerFactory.getLogger(HttpContentResponseHandler.class);
 
     private final HttpContentConverter<T> contentConverter;
 
@@ -66,7 +66,7 @@ public class HttpContentResponseHandler<T>
                     }
         }
         catch (IOException e) {
-            log.warnDebug(e, "Could not locate response body stream");
+            log.warn("Could not locate response body stream", e);
             // normal for 401, 403 and 404 responses, for example...
         }
 
